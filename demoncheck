@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "Enter the service you wish to see is running"
+echo 
+echo
+read SERVICE
+
+echo
+echo "checking if service is running"
+echo
+ps -cax | grep $SERVICE
+
+if [ $? -eq 0 ]; 
+then
+	echo "the service entered is running"
+else
+	echo "The service is not running"
+fi
